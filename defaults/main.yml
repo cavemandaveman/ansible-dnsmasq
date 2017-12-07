@@ -4,3 +4,4 @@ dnsmasq_domain_needed: false
 dnsmasq_bogus_priv: true
 dnsmasq_authoritative: false
 dnsmasq_expand_hosts: false
+firewalld_dns_zones: [public]

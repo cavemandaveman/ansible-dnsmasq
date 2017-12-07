@@ -32,6 +32,7 @@ None of the variables below are required.
 | `dnsmasq_resolv_file`      | -       | Set this to specify a custom `resolv.conf` file.                                                                                                          |
 | `dnsmasq_upstream_servers` | -       | Set this to specify the IP address of upstream DNS servers directly. You can specify one ore more servers as a list.                                    |
 | `dnsmasq_srv_hosts`        | -       | Array of hashes specifying SRV records, with keys `name` (mandatory), `target`, `port`, `priority` and `weight` for each record. See below.              |
+| `firewalld_dns_zones`      | -       | Array of firewalld zones in which to allow inbound requests on DNS port (53/udp).                                                                        |
 
 ### DNS settings
 

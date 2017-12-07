@@ -20,3 +20,16 @@
     state: started
     enabled: yes
   tags: dnsmasq
+
+- name: Enable FirewallD DNS service
+  firewalld:
+    service: dns
+    zone: "{{ item }}"
+    permanent: true
+    immediate: true
+    state: enabled
+  notify:
+    - restart firewalld
+  with_items: "{{ firewalld_dns_zones | default([]) }}"
+  when: firewalld_dns_zones is defined
+  tags: dnsmasq
